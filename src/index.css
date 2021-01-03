@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  font-family: mulish;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+}
+header{
+  background-color: grey;
+  width: 400px;
+  height: 140px;
+  padding: 10px;
+  color:white;
+  border-radius:15px 15px 0 0 ;
+}
+header p{
+  font-size: 1.3rem;
+}
+.todo-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  width: 400px;
+  height: auto;
+}
+.todo{
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  color:white;
+  background-color: red;
+}
+form{
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  background-color: blue;
+}
+input{
+  width: 310px;
+  height: 50px;
+  border: none;
+}
+button{
+  width: 80px;
+  height: 50px;
+  border: none;
+  margin-left: 8px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+ 
+}
+li {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
