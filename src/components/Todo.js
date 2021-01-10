@@ -1,16 +1,12 @@
 import React from "react";
 
-const Todo = ({ item, items}) => {
-  //function to handle the list delete
-  function handleDelete() {
-    items.filter((item) => item.key !== items.key);
-    console.log("delete clicked");
-  }
+const Todo = ({key, item, items ,handleDelete,setItems}) => {
+
   return (
-    <div>
+    <li>
       <p>{item}</p>
-      <button onClick={handleDelete}>Delete</button>
-    </div>
+      <button onClick={handleDelete(key)}>Delete</button>
+    </li>
   );
 };
 

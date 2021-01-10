@@ -8,7 +8,7 @@ const TodoList = () => {
   // State
   const [data, setData] = useState("");
   const [items, setItems] = useState([]);
-  const [filteredTodos, setFilteredTodos] = useState([]);
+  // const [filteredTodos, setFilteredTodos] = useState([]);
 
   //function to handle the submit function
   function handleSubmit(e) {
@@ -22,12 +22,17 @@ const TodoList = () => {
     setData(e.target.value);
   }
 
+    //function to handle the list delete
+    function handleDelete(key) {
+      setItems(items.filter((el) => el.key !== key));
+      console.log("delete clicked");
+    }
 
   return (
     <div className="container">
       <section className="todo-cont">
         <Header />
-        <Todos items={items} />
+        <Todos items={items} setItems={setItems} handleDelete={handleDelete} />
         <Forms
           handleSubmit={handleSubmit}
           handleInput={handleInput}
